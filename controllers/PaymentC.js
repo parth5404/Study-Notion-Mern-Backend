@@ -9,7 +9,7 @@ const razorpayInstance = require('../config/razorpayInstance');
 const CourseProgress = require('../models/CourseProgress');
 const paymentSuccessEmailTemplate = require('../mail/templates/paymentSuccessEmailTemplate');
 const crypto = require('crypto');
-
+const dotenv=require("dotenv").config();
 // @desc      Create an Razorpay order and capture payment automatically
 // @route     POST /api/v1/payments/createorder
 // @access    Private/Student

@@ -7,7 +7,7 @@ const ErrorResponse = require('../utils/ErrorResponse');
 const Section = require('../models/Section');
 const SubSection = require('../models/SubSection');
 const CourseProgress = require('../models/CourseProgress');
-
+const dotenv=require("dotenv").config();
 // @desc      Get all published courses
 // @route     GET /api/v1/courses
 // @access    Public

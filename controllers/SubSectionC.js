@@ -4,7 +4,7 @@ const ErrorResponse = require('../utils/ErrorResponse');
 const clgDev = require('../utils/clgDev');
 const cloudUploader = require('../utils/cloudUploader');
 const Course = require('../models/Course');
-
+const dotenv=require("dotenv").config();
 // @desc      Create a subsection
 // @route     POST /api/v1/subsections
 // @access    Private/instructor // VERIFIED

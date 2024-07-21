@@ -2,7 +2,7 @@ const express = require('express');
 const colors = require('colors');
 const morgan = require('morgan');
 const fileUpload = require('express-fileupload');
-const dotenv = require('dotenv');
+const dotenv = require('dotenv').config();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const connectDB = require('./config/database');
@@ -11,13 +11,12 @@ const errorHandler = require('./middlewares/errorHandler');
 const path = require('path');
 const cloudinaryConnect = require('./config/cloudinaryConnect');
 
-dotenv.config({ path: './config/config.env' });
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT||5400;
 const app = express();
 connectDB();
 cloudinaryConnect();
 
-// Dev logging middleware
+//Dev logging middleware
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }

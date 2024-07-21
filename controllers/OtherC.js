@@ -2,7 +2,7 @@ const clgDev = require('../utils/clgDev');
 const ErrorResponse = require('../utils/ErrorResponse');
 const emailSender = require('../utils/emailSender');
 const { contactUsEmail } = require('../mail/templates/contactFormRes');
-
+const dotenv=require("dotenv").config();
 // @desc      Contact us
 // @route     POST /api/v1/other/contactus
 // @access    Public

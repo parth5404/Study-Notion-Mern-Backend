@@ -11,6 +11,7 @@ const clgDev = require('../utils/clgDev');
 const jwt = require('jsonwebtoken');
 const accountCreationTemplate = require('../mail/templates/accountCreationTemplate');
 const adminCreatedTemplate = require('../mail/templates/adminCreatedTemplate');
+const dotenv=require("dotenv").config();
 
 // @desc      Send OTP for email verification
 // @route     POST /api/v1/auth/sendotp
@@ -132,6 +133,7 @@ exports.login = async (req, res, next) => {
 
     sendTokenResponse(res, user, 200);
   } catch (err) {
+    console.log(err);
     next(new ErrorResponse('Login failed. Please try again', 500));
   }
 };

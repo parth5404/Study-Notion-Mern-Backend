@@ -3,11 +3,11 @@ const clgDev = require('../utils/clgDev');
 const dotenv = require('dotenv');
 const colors = require('colors');
 
-dotenv.config({ path: './config.env' });
-
+//dotenv.config({ path: '/config.env' });
+const url="mongodb+srv://parthlahoti5404:byF5sVig8UhFBY5i@cluster0.wbav0jr.mongodb.net/"
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI);
+    const conn = await mongoose.connect(url);
     clgDev("MongoDB connected successfully".cyan.underline.bold);
   } catch (err) {
     clgDev(`${err.message}`.red.underline.bold);

@@ -14,6 +14,7 @@ const cloudUploader = async (file, folder, height, quality) => {
     const uploadResponse = await cloudinary.uploader.upload(file.tempFilePath, options);
     return uploadResponse;
   } catch (err) {
+    console.log("cloudinary ka error")
     throw err;
   }
 };

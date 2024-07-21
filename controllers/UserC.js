@@ -5,7 +5,7 @@ const cloudUploader = require('../utils/cloudUploader');
 const clgDev = require('../utils/clgDev');
 const secToDuration = require('../utils/secToDuration');
 const CourseProgress = require('../models/CourseProgress');
-
+const dotenv=require("dotenv").config();
 // @desc      Get all users
 // @route     GET /api/v1/users
 // @access    Private/Admin // VERIFIED

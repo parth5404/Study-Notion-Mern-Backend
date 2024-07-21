@@ -24,7 +24,7 @@ const emailSender = async (toEmail, subject, body) => {
 
     // send mail
     const info = await transporter.sendMail({
-      from: `${process.env.FROM_NAME} | sunny8080 <${process.env.FROM_EMAIL}>`,
+      from: "parth",
       to: toEmail,
       subject: subject,
       html: body,

@@ -1,6 +1,6 @@
 const cloudinary = require('cloudinary').v2;
 const clgDev = require('../utils/clgDev');
-require('dotenv').config({ path: './config.env' });
+require('dotenv').config();
 
 const cloudinaryConnect = () => {
   try {

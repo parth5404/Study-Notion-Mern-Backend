@@ -1,7 +1,7 @@
 const ErrorResponse = require('../utils/ErrorResponse');
 const jwt = require('jsonwebtoken');
 const clgDev = require('../utils/clgDev');
-
+const dotenv=require("dotenv").config();
 exports.protect = async (req, res, next) => {
   try {
     // TODO : test which is better
@@ -36,7 +36,7 @@ exports.authorize = (...roles) => {
 
 exports.adminAuthorization = () => {
   return (req, res, next) => {
-    if (req.user.email !== process.env.SITE_OWNER_EMAIL) {
+    if (req.user.email !== "parthlahoti5404@gmail.com") {
       return next(new ErrorResponse('User not authorized to access this route', 401));
     }
     next();
